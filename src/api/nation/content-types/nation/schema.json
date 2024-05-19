@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "nations",
+  "info": {
+    "singularName": "nation",
+    "pluralName": "nations",
+    "displayName": "Nation",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "belfioreCode": {
+      "type": "string"
+    },
+    "regions": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::region.region",
+      "mappedBy": "nation"
+    }
+  }
+}

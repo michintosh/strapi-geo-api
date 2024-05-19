@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "zip_codes",
+  "info": {
+    "singularName": "zip-code",
+    "pluralName": "zip-codes",
+    "displayName": "Zip Code"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "city": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::city.city",
+      "inversedBy": "zip_codes"
+    }
+  }
+}

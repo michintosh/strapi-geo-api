@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cities",
+  "info": {
+    "singularName": "city",
+    "pluralName": "cities",
+    "displayName": "City",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "code": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "belfioreCode": {
+      "type": "string"
+    },
+    "lon": {
+      "type": "float"
+    },
+    "lat": {
+      "type": "float"
+    },
+    "province": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::province.province",
+      "inversedBy": "cities"
+    },
+    "zip_codes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::zip-code.zip-code",
+      "mappedBy": "city"
+    }
+  }
+}
